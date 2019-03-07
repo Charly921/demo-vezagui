@@ -1,0 +1,307 @@
+<div class="app">
+  <form>
+    <section>
+      <div class="page">
+        <div class="inner">
+          <div class="header">
+              <img src="./assets/logo.jpg">
+              <div class="table">
+                <div class="tr thead">
+                  <div class="td">Orden de servicio</div>
+                </div>
+                <div class="tr"><input type="text"></div>
+              </div>
+              
+          </div>
+          <div>
+            <p>MECANICA EN GENERAL Y AFINACIÓN POR COMPUTADORA PARA FULL INJECTION TODAS LAS MARCAS</p>
+            <p>HEROICO COLEGIO MILITAR No. 218 COL CHAPULTEPEC OTE. C.P. 58260 TEL. 315 02 26 MORELIA, MICH.</p>
+          </div>
+          <section>
+            <div class="table">
+                <div class="tr">
+                    <div class="td"><div class="line">NOMBRE: <input type="text"></div></div>
+                    <div class="td"><div class="line">RFC: <input type="text"></div></div>
+                </div>
+                <div class="tr">
+                    <div class="td"><div class="line">DIRECCIÓN: <input type="text"></div></div>
+                    <div class="td"><div class="line">TEL: <input type="text"></div></div>
+                </div>
+                <div class="tr">
+                    <div class="td"><div class="line">CIUDAD: <input type="text"></div></div>
+                </div>
+            </div>
+            <div class="table">
+              <div class="tr">
+                <div class="td">Documentación</div>
+                <div class="td">Tarjeta de circ.</div>
+                <div class="td">Manual de oper.</div>
+                <div class="td">Poliza de seguro</div>
+              </div>
+            </div>
+          </section>
+          <section class="section2" >
+              <div class="table" id="main_table">
+                <div class="tr thead">
+                  <div class="td">Marca</div>
+                  <div class="td">Modelo</div>
+                  <div class="td">Color</div>
+                  <div class="td">Placas</div>
+                  <div class="td">Kilometraje</div>
+                </div>
+                <div class="tr">
+                    <div class="td"><input type="text" formControlName="qty" class="cantidad"></div>
+                    <div class="td"><input type="text" class="descripcion"></div>
+                    <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                </div>
+              </div>
+              <div class="table">
+                <div class="tr">
+                    <div class="td"><div class="line">Observaciones recepción: <input type="text"></div></div>
+                </div>
+                <div class="tr">
+                <div class="td"><div class="line">Falla reportada: <input type="text"></div></div>
+                </div>
+              </div>
+                
+              
+            </section>
+            <div id="featur">
+            <section class="section3" >
+                <div class="table" >
+                  <div class="tr thead">
+                    <div class="td">Interior</div>
+                    <div class="td">Bueno</div>
+                    <div class="td">Malo</div>
+                    <div class="td">Observaciones</div>
+                  </div>
+                  <div class="tr">
+                      <div class="td"><p>Sensor de alarma</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                      <div class="td"><p>Velocimetro</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                      <div class="td"><p>Indicador de Temp.</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                      <div class="td"><p>Indicador de Gasl.</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                      <div class="td"><p>Radio</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                      <div class="td"><p>Bocinas</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                      <div class="td"><p>Espejo interior</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                      <div class="td"><p>Aire acondicionado</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                      <div class="td"><p>Luces interiores</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                      <div class="td"><p>Extintor</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                      <div class="td"><p>Reflejantes</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                      <div class="td"><p>Gato</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr" style="height:14mm;">
+                      <div class="td"><p>Condicines de control y llaves</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                </div>
+              </section>
+              <div class="featur_">
+              <section class="section4" >
+                  <div class="table" >
+                    <div class="tr thead">
+                      <div class="td">Exterior</div>
+                      <div class="td">Bueno</div>
+                      <div class="td">Malo</div>
+                      <div class="td">Observaciones</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Llantas</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Toldo o techo</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Antena</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Facia delantera</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Facia trasera</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Cristales</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">Limpiadores</div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">Espejos exteriores</div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">Tapón de combus</div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Tapón de ruedas</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Llanta de refacción</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                  </div>
+                </section>
+                <section class="section5">
+                  <div class="table" >
+                    <div class="tr thead">
+                      <div class="td">Motor</div>
+                      <div class="td">Bueno</div>
+                      <div class="td">Malo</div>
+                      <div class="td">Observaciones</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Aceite</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Anticongelante</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Liquido de frenos</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Aceite Hidráulico</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><p>Batería (ácido)</p></div>
+                        <div class="td"><input type="text" class="descripcion"></div>
+                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    </div>
+                    <div class="tr">
+                      <div class="td"><p>Bandas</p></div>
+                      <div class="td"><input type="text" class="descripcion"></div>
+                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
+                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  </div>
+                </section>
+              </div>
+              
+                
+              
+            </div>
+            
+            <div>
+              <p>NOTA: PARA HACER ENTREGA DE SU VEHÍCULO ES INDISPENSABLE PRESENTAR ESTA ORDEN DE RECEPCIÓN DESPUÉS DE 30 DÍAS, SI NO RECOGE LA UNIDAD SE COBRARÁ PENSIÓN, ESTA EMPRESA NO SE HACE RESPONSABLE DEL MAL USO QUE LE DE A ESTA ORDEN.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="page">
+        <div class="inner">
+           <!-- <div class="wrapper">
+                <div id="gauge2" class="gauge-container two">
+                  <span class="label">.two</span>
+                </div>
+              </div>-->
+        </div>
+      </div>
+    </section>
+  </form>
+</div>
