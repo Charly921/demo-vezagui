@@ -4,73 +4,105 @@
       <div class="page">
         <div class="inner">
           <div class="header">
-              <img src="./assets/logo.jpg">
+            <img src="./assets/logo.jpg">
+            <div class="head_order">
               <div class="table">
                 <div class="tr thead">
                   <div class="td">Orden de servicio</div>
                 </div>
-                <div class="tr"><input type="text"></div>
+                <div class="tr"><input type="number" style="color:red; font-weight: 700;"></div>
               </div>
-              
+              <div>
+                <span>{{fecha}}</span>
+              </div>
+            </div>
           </div>
           <div>
-            <p>MECANICA EN GENERAL Y AFINACIÓN POR COMPUTADORA PARA FULL INJECTION TODAS LAS MARCAS</p>
-            <p>HEROICO COLEGIO MILITAR No. 218 COL CHAPULTEPEC OTE. C.P. 58260 TEL. 315 02 26 MORELIA, MICH.</p>
+            <span>MECANICA EN GENERAL Y AFINACIÓN POR COMPUTADORA PARA FULL INJECTION TODAS LAS MARCAS</span><br>
+            <span>HEROICO COLEGIO MILITAR No. 218 COL CHAPULTEPEC OTE. C.P. 58260 TEL. 315 02 26 MORELIA, MICH.</span>
           </div>
           <section>
-            <div class="table">
-                <div class="tr">
-                    <div class="td"><div class="line">NOMBRE: <input type="text"></div></div>
-                    <div class="td"><div class="line">RFC: <input type="text"></div></div>
-                </div>
-                <div class="tr">
-                    <div class="td"><div class="line">DIRECCIÓN: <input type="text"></div></div>
-                    <div class="td"><div class="line">TEL: <input type="text"></div></div>
-                </div>
-                <div class="tr">
-                    <div class="td"><div class="line">CIUDAD: <input type="text"></div></div>
-                </div>
-            </div>
-            <div class="table">
+            <div class="table" id="info">
               <div class="tr">
-                <div class="td">Documentación</div>
-                <div class="td">Tarjeta de circ.</div>
-                <div class="td">Manual de oper.</div>
-                <div class="td">Poliza de seguro</div>
+                <div class="td">
+                  <div class="line">NOMBRE: <input type="text"></div>
+                </div>
+                <div class="td b_r">
+                  <div class="line">RFC: <input type="text"></div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="td">
+                  <div class="line">DIRECCIÓN: <input type="text"></div>
+                </div>
+                <div class="td b_r">
+                  <div class="line">TEL: <input type="text"></div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="td b_r b_b">
+                  <div class="line">CIUDAD: <input type="text"></div>
+                </div>
+              </div>
+            </div>
+            <div class="table" id="doc">
+              <div class="tr">
+                <div class="td b_b" id="docum">Documentación</div>
+                <div class="td b_b">
+                  Tarjeta de circ.
+                  <label for="r1"> <b> SI </b> <input type="radio" name="r1" /></label>
+                  <label for="r2"> <b> NO </b> <input type="radio" name="r1" /></label>
+                </div>
+                <div class="td b_b">
+                  Manual de oper.
+                  <label for="r3"> <b> SI </b> <input type="radio" name="r2" /></label>
+                  <label for="r4"> <b> NO </b> <input type="radio" name="r2" /></label>
+                </div>
+                <div class="td b_r b_b">
+                  Poliza de seguro
+                  <label for="r5"> <b> SI </b> <input type="radio" name="r3" /></label>
+                  <label for="r6"> <b> NO </b> <input type="radio" name="r3" /></label>
+                </div>
               </div>
             </div>
           </section>
-          <section class="section2" >
-              <div class="table" id="main_table">
-                <div class="tr thead">
-                  <div class="td">Marca</div>
-                  <div class="td">Modelo</div>
-                  <div class="td">Color</div>
-                  <div class="td">Placas</div>
-                  <div class="td">Kilometraje</div>
-                </div>
-                <div class="tr">
-                    <div class="td"><input type="text" formControlName="qty" class="cantidad"></div>
-                    <div class="td"><input type="text" class="descripcion"></div>
-                    <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+          <section class="section2">
+            <h3 id="sub_title">DATOS DEL VEHÍCULO</h3>
+            <div class="table b_b b_b_r" id="main_table">
+              <div class="tr thead">
+                <div class="td b_b">Marca</div>
+                <div class="td b_b">Modelo</div>
+                <div class="td b_b">Color</div>
+                <div class="td b_b">Placas</div>
+                <div class="td b_b b_r">Kilometraje</div>
+              </div>
+              <div class="tr">
+                <div class="td b_b"><input type="text" formControlName="qty" class="cantidad"></div>
+                <div class="td b_b"><input type="text"></div>
+                <div class="td b_b"><input type="text" formControlName="price" class="punitario"></div>
+                <div class="td b_b"><input type="text" formControlName="subtotal" class="importe"></div>
+                <div class="td b_b b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+              </div>
+            </div>
+            <div class="table b_t_r">
+              <div class="tr">
+                <div class="td b_r">
+                  <div class="line">Observaciones recepción: <input type="text" style="width:77%;"></div>
                 </div>
               </div>
-              <div class="table">
-                <div class="tr">
-                    <div class="td"><div class="line">Observaciones recepción: <input type="text"></div></div>
-                </div>
-                <div class="tr">
-                <div class="td"><div class="line">Falla reportada: <input type="text"></div></div>
+              <div class="tr">
+                <div class="td b_b b_r">
+                  <div class="line">Falla reportada: <input type="text" style="width:85%;"></div>
                 </div>
               </div>
-                
-              
-            </section>
-            <div id="featur">
-            <section class="section3" >
-                <div class="table" >
+            </div>
+
+
+          </section>
+          <div id="featur">
+            <div id="featu_">
+              <section class="section3">
+                <div class="table">
                   <div class="tr thead">
                     <div class="td">Interior</div>
                     <div class="td">Bueno</div>
@@ -78,228 +110,327 @@
                     <div class="td">Observaciones</div>
                   </div>
                   <div class="tr">
-                      <div class="td"><p>Sensor de alarma</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td">
+                      <p>Sensor de alarma</p>
+                    </div>
+                    <div class="td"><input type="radio" name="i1"></div>
+                    <div class="td"><input type="radio" name="i1" formControlName="price" class="punitario"></div>
+                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
                   <div class="tr">
-                      <div class="td"><p>Velocimetro</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td">
+                      <p>Velocímetro</p>
+                    </div>
+                    <div class="td"><input type=radio name="i2"></div>
+                    <div class="td"><input type=radio name="i2" formControlName="price" class="punitario"></div>
+                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
                   <div class="tr">
-                      <div class="td"><p>Indicador de Temp.</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td">
+                      <p>Indicador de Temp.</p>
+                    </div>
+                    <div class="td"><input type=radio name="i3"></div>
+                    <div class="td"><input type=radio name="i3" formControlName="price" class="punitario"></div>
+                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
                   <div class="tr">
-                      <div class="td"><p>Indicador de Gasl.</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td">
+                      <p>Indicador de Gasl.</p>
+                    </div>
+                    <div class="td"><input type=radio name="i4"></div>
+                    <div class="td"><input type=radio name="i4" formControlName="price" class="punitario"></div>
+                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
                   <div class="tr">
-                      <div class="td"><p>Radio</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td">
+                      <p>Radio</p>
+                    </div>
+                    <div class="td"><input type=radio name="i5"></div>
+                    <div class="td"><input type=radio name="i5" formControlName="price" class="punitario"></div>
+                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
                   <div class="tr">
-                      <div class="td"><p>Bocinas</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td">
+                      <p>Bocinas</p>
+                    </div>
+                    <div class="td"><input type=radio name="i6"></div>
+                    <div class="td"><input type=radio name="i6" formControlName="price" class="punitario"></div>
+                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
                   <div class="tr">
-                      <div class="td"><p>Espejo interior</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td">
+                      <p>Espejo interior</p>
+                    </div>
+                    <div class="td"><input type=radio name="i7"></div>
+                    <div class="td"><input type=radio name="i7" formControlName="price" class="punitario"></div>
+                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
                   <div class="tr">
-                      <div class="td"><p>Aire acondicionado</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td">
+                      <p>Aire acondicionado</p>
+                    </div>
+                    <div class="td"><input type=radio name="i8"></div>
+                    <div class="td"><input type=radio name="i8" formControlName="price" class="punitario"></div>
+                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
                   <div class="tr">
-                      <div class="td"><p>Luces interiores</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td">
+                      <p>Luces interiores</p>
+                    </div>
+                    <div class="td"><input type=radio name="i9"></div>
+                    <div class="td"><input type=radio name="i9" formControlName="price" class="punitario"></div>
+                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
                   <div class="tr">
-                      <div class="td"><p>Extintor</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td">
+                      <p>Extintor</p>
+                    </div>
+                    <div class="td"><input type=radio name="i10"></div>
+                    <div class="td"><input type=radio name="i10" formControlName="price" class="punitario"></div>
+                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
                   <div class="tr">
-                      <div class="td"><p>Reflejantes</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td">
+                      <p>Reflejantes</p>
+                    </div>
+                    <div class="td"><input type=radio name="i11"></div>
+                    <div class="td"><input type=radio name="i11" formControlName="price" class="punitario"></div>
+                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
                   <div class="tr">
-                      <div class="td"><p>Gato</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td">
+                      <p>Gato</p>
+                    </div>
+                    <div class="td"><input type=radio name="i12"></div>
+                    <div class="td"><input type=radio name="i12" formControlName="price" class="punitario"></div>
+                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
-                  <div class="tr" style="height:14mm;">
-                      <div class="td"><p>Condicines de control y llaves</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  <div class="tr" style="height:11.4mm;">
+                    <div class="td b_b">
+                      <p>Condicines de control y llaves</p>
+                    </div>
+                    <div class="td b_b"><input type=radio name="i13"></div>
+                    <div class="td b_b"><input type=radio name="i13" formControlName="price" class="punitario"></div>
+                    <div class="td b_r b_b"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
                 </div>
               </section>
-              <div class="featur_">
-              <section class="section4" >
-                  <div class="table" >
-                    <div class="tr thead">
-                      <div class="td">Exterior</div>
-                      <div class="td">Bueno</div>
-                      <div class="td">Malo</div>
-                      <div class="td">Observaciones</div>
-                    </div>
-                    <div class="tr">
-                        <div class="td"><p>Llantas</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td"><p>Toldo o techo</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td"><p>Antena</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td"><p>Facia delantera</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td"><p>Facia trasera</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td"><p>Cristales</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td">Limpiadores</div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td">Espejos exteriores</div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td">Tapón de combus</div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td"><p>Tapón de ruedas</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td"><p>Llanta de refacción</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
+              <div class="gauge_">
+              <rg-gauge-chart [canvasWidth]="canvasWidth" [needleValue]="needleValue" [centralLabel]="centralLabel"
+                [options]="options" [name]="name" [bottomLabel]="bottomLabel"></rg-gauge-chart>
+                <input id="slider" type="range" min="0" max="100" value="0"  class="no-print" />
+                </div>
+            </div>
+            <div id="featur_">
+              <section class="section4">
+                <div class="table">
+                  <div class="tr thead">
+                    <div class="td">Exterior</div>
+                    <div class="td">Bueno</div>
+                    <div class="td">Malo</div>
+                    <div class="td">Observaciones</div>
                   </div>
-                </section>
-                <section class="section5">
-                  <div class="table" >
-                    <div class="tr thead">
-                      <div class="td">Motor</div>
-                      <div class="td">Bueno</div>
-                      <div class="td">Malo</div>
-                      <div class="td">Observaciones</div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Llantas</p>
                     </div>
-                    <div class="tr">
-                        <div class="td"><p>Aceite</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td"><p>Anticongelante</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td"><p>Liquido de frenos</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td"><p>Aceite Hidráulico</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                        <div class="td"><p>Batería (ácido)</p></div>
-                        <div class="td"><input type="text" class="descripcion"></div>
-                        <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                        <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
-                    </div>
-                    <div class="tr">
-                      <div class="td"><p>Bandas</p></div>
-                      <div class="td"><input type="text" class="descripcion"></div>
-                      <div class="td"><input type="text" formControlName="price" class="punitario"></div>
-                      <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio name="e1"></div>
+                    <div class="td"><input type=radio name="e1" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Toldo o techo</p>
+                    </div>
+                    <div class="td"><input type=radio name="e2"></div>
+                    <div class="td"><input type=radio name="e2" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
                   </div>
-                </section>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Antena</p>
+                    </div>
+                    <div class="td"><input type=radio name="e3"></div>
+                    <div class="td"><input type=radio name="e3" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Facia delantera</p>
+                    </div>
+                    <div class="td"><input type=radio name="e4"></div>
+                    <div class="td"><input type=radio name="e4" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Facia trasera</p>
+                    </div>
+                    <div class="td"><input type=radio name="e5"></div>
+                    <div class="td"><input type=radio name="e5" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Cristales</p>
+                    </div>
+                    <div class="td"><input type=radio name="e6"></div>
+                    <div class="td"><input type=radio name="e6" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Limpiadores</p>
+                    </div>
+                    <div class="td"><input type=radio name="e7"></div>
+                    <div class="td"><input type=radio name="e7" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Espejos exteriores</p>
+                    </div>
+                    <div class="td"><input type=radio name="e8"></div>
+                    <div class="td"><input type=radio name="e8" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Tapón de combus</p>
+                    </div>
+                    <div class="td"><input type=radio name="e9"></div>
+                    <div class="td"><input type=radio name="e9" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Tapón de ruedas</p>
+                    </div>
+                    <div class="td"><input type=radio name="e10"></div>
+                    <div class="td"><input type=radio name="e10" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td b_b">
+                      <p>Llanta de refacción</p>
+                    </div>
+                    <div class="td b_b"><input type=radio name="e11"></div>
+                    <div class="td b_b"><input type=radio name="e11" formControlName="price" class="punitario"></div>
+                    <div class="td b_b"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                </div>
+              </section>
+              <section class="section5">
+                <div class="table">
+                  <div class="tr thead">
+                    <div class="td">Motor</div>
+                    <div class="td">Bueno</div>
+                    <div class="td">Malo</div>
+                    <div class="td">Observaciones</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Aceite</p>
+                    </div>
+                    <div class="td"><input type=radio name="m1"></div>
+                    <div class="td"><input type=radio name="m1" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Anticongelante</p>
+                    </div>
+                    <div class="td"><input type=radio name="m2"></div>
+                    <div class="td"><input type=radio name="m2" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Líquido de frenos</p>
+                    </div>
+                    <div class="td"><input type=radio name="m3"></div>
+                    <div class="td"><input type=radio name="m3" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Aceite Hidráulico</p>
+                    </div>
+                    <div class="td"><input type=radio name="m4"></div>
+                    <div class="td"><input type=radio name="m4" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td">
+                      <p>Batería (ácido)</p>
+                    </div>
+                    <div class="td"><input type=radio name="m5"></div>
+                    <div class="td"><input type=radio name="m5" formControlName="price" class="punitario"></div>
+                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                  <div class="tr">
+                    <div class="td b_b">
+                      <p>Bandas</p>
+                    </div>
+                    <div class="td b_b"><input type=radio name="m6"></div>
+                    <div class="td b_b"><input type=radio name="m6" formControlName="price" class="punitario"></div>
+                    <div class="td b_b"><input type="text" formControlName="subtotal" class="importe"></div>
+                  </div>
+                </div>
+              </section>
+              <div class="sign">
+                <signature-pad [options]="signaturePadOptions"></signature-pad>
+                  <hr>
+                  <div style="text-align:center; font-size: 0.8em;"><a (click)="clearPad()">FIRMA</a></div>
               </div>
-              
-                
-              
             </div>
-            
-            <div>
-              <p>NOTA: PARA HACER ENTREGA DE SU VEHÍCULO ES INDISPENSABLE PRESENTAR ESTA ORDEN DE RECEPCIÓN DESPUÉS DE 30 DÍAS, SI NO RECOGE LA UNIDAD SE COBRARÁ PENSIÓN, ESTA EMPRESA NO SE HACE RESPONSABLE DEL MAL USO QUE LE DE A ESTA ORDEN.</p>
-            </div>
+          </div>
+
+          <div>
+            <span><b>NOTA:</b> PARA HACER ENTREGA DE SU VEHÍCULO ES INDISPENSABLE PRESENTAR ESTA ORDEN DE RECEPCIÓN
+              DESPUÉS DE 30 DÍAS, SI NO RECOGE LA UNIDAD SE COBRARÁ PENSIÓN, ESTA EMPRESA NO SE HACE RESPONSABLE DEL MAL
+              USO QUE LE DE A ESTA ORDEN.</span>
+          </div>
         </div>
       </div>
     </section>
     <section>
       <div class="page">
         <div class="inner">
-           <!-- <div class="wrapper">
-                <div id="gauge2" class="gauge-container two">
-                  <span class="label">.two</span>
+          <div class="section6">
+            <h3 id="sub_title">ESTADO DEL VEHÍCULO</h3><br><br>
+            <div class="table">
+              <div class="tr thead">
+                  <div class="td">Imagen</div>
+                  <div class="td b_r">Descripción</div>
+              </div>
+              <div class="tr">
+                <div class="td">
+                  <div class="image-container"><input type="file" accept="image/*" onchange="showMyImage(this)"></div>
                 </div>
-              </div>-->
+                <div class="td b_r"><textarea name="" id="txa" cols="45" rows="6" wrap="soft"></textarea></div>
+              </div>
+              <div class="tr">
+                <div class="td">
+                    <div class="image-container"><input type="file" accept="image/*" onchange="showMyImage(this)"></div>
+                </div>
+                <div class="td b_r"><textarea name="" id="txa" cols="45" rows="6" wrap="soft"></textarea></div>
+              </div>
+              <div class="tr">
+                <div class="td">
+                    <div class="image-container"><input type="file" accept="image/*" onchange="showMyImage(this)"></div>
+                </div>
+                <div class="td b_r"><textarea name="" id="txa" cols="45" rows="6" wrap="soft"></textarea></div>
+              </div>
+              <div class="tr">
+                <div class="td b_b">
+                    <div class="image-container"><input type="file" accept="image/*" onchange="showMyImage(this)"></div>
+                </div>
+                <div class="td b_b b_r"><textarea name="" id="txa" cols="45" rows="6" wrap="soft"></textarea></div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { GaugeChartComponent } from 'angular-gauge-chart';
+import { SignaturePadModule } from 'angular2-signaturepad';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,10 +12,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   declarations: [
     AppComponent,
     NewSurveyComponent,
-    DashboardComponent
+    DashboardComponent,
+    GaugeChartComponent
   ],
   imports: [
     BrowserModule,
+    SignaturePadModule,   
     AppRoutingModule
   ],
   providers: [],

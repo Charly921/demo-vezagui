@@ -11,9 +11,10 @@
     --font: 'Open Sans', sans-serif;
     --font-size: 0.9em;
     --background: #fafafa;
-    --text-color: #4369aa;
+    --text-color: #494b4e;
     --logo-width: 3.5cm;
-    --input-text-color: #555;
+    --input-text-color: #494b4e;
+    --head-color: #4369aa;
   }
   *,
   *::after,
@@ -64,11 +65,12 @@
       --font: 'Open Sans', sans-serif;
       --font-size: 0.9em;
       --background: #fafafa;
-      --text-color: #4352aa;
+      --text-color: #494b4e;
       --logo-width: 3.5cm;
-      --input-text-color: #555;
+      --input-text-color: #494b4e;
       /*--primary-color: #BCDB68;*/
       --border-color: #8d8d8d;
+      --head-color: #4369aa;
     }
     .no-print { display: none; }
     nav {
