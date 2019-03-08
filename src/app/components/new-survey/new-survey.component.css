@@ -76,8 +76,9 @@ input[type=radio]:focus {
     
   }
   .td p{
-    font-size: 0.9em;
+    font-size: 0.86em;
     margin-left: 2mm;
+    font-weight: 700;
   }
    .b_b{
     border-bottom:0;
@@ -96,8 +97,8 @@ input[type=radio]:focus {
   .line{
     display: flex;
     position: relative;
-    font-size: 0.9em;
-    font-weight: 400;
+    font-size: 0.85em;
+    font-weight: 700;
     margin-left: 2mm;
   }
   .line input{
