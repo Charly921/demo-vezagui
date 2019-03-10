@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientService } from '../../services/client.service';
+import { Client } from '../../shared/client';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  clients=null;
+  constructor(private clientService: ClientService) { }
 
   ngOnInit() {
+    this.getAll();
   }
 
+  getAll(){
+    this.clientService.getAll().subscribe(result => {
+      this.clients = result;
+    });
+  }
 }

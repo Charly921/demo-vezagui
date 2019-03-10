@@ -2,6 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { SignaturePad } from 'angular2-signaturepad/signature-pad';
 import 'fecha';
 import fechaObj from 'fecha';
+import { ClientService } from '../../services/client.service';
+import { HttpClient } from '@angular/common/http';
+import { Client } from '../../shared/client';
 
 @Component({
   selector: 'app-new-survey',
@@ -19,7 +22,7 @@ export class NewSurveyComponent implements OnInit {
     'penColor': "rgb(16, 16, 16)"
   };
   public canvasWidth = 200
-  public needleValue = 25
+  public needleValue = 0
   public centralLabel = ''
   public name = ''
   public bottomLabel = ''
@@ -33,10 +36,108 @@ export class NewSurveyComponent implements OnInit {
     needleStartValue: 60,
   }
   fecha: string;
-  constructor() { }
+  //clients: any[];
+  clients = null;
+
+  //client: Client;
+  
+  client={
+    orden: null,
+    nombre: null,
+    rfc: null,
+    direccion: null,
+    tel: null,
+    ciudad: null,
+    tarjeta: null,
+    manual: null,
+    poliza: null,
+    marca: null,
+    modelo: null,
+    color: null,
+    placas: null,
+    km: null,
+    observ: null,
+    falla: null,
+    fecha: null,
+    combust: null,
+    firma: null,
+    img1: null,
+    img1d: null,
+    img2: null,
+    img2d: null,
+    img3: null,
+    img3d: null,
+    img4: null,
+    img4d: null,
+    sensor: null,
+    veloci: null,
+    indict: null,
+    indicg: null,
+    radio: null,
+    bocinas: null,
+    espejoi: null,
+    aire: null,
+    luces: null,
+    extint: null,
+    reflej: null,
+    gato: null,
+    condic: null,
+    sensord: null,
+    velocid: null,
+    indictd: null,
+    indicgd: null,
+    radiod: null,
+    bocinasd: null,
+    espejoid: null,
+    aired: null,
+    lucesd: null,
+    extintd: null,
+    reflejd: null,
+    gatod: null,
+    condicd: null,
+    llantas: null,
+    toldo: null,
+    antena: null,
+    faciad: null,
+    faciat: null,
+    crista: null,
+    limpia: null,
+    espeje: null,
+    taponc: null,
+    taponr: null,
+    llantar: null,
+    aceite: null,
+    anticon: null,
+    liquido: null,
+    aceiteh: null,
+    bateria: null,
+    bandas: null,
+    llantasd: null,
+    toldod: null,
+    antenad: null,
+    faciadd: null,
+    faciatd: null,
+    cristad: null,
+    limpiad: null,
+    espejed: null,
+    taponcd: null,
+    taponrd: null,
+    llantard: null,
+    aceited: null,
+    anticond: null,
+    liquidod: null,
+    aceitehd: null,
+    bateriad: null,
+    bandasd: null
+  };
+  orden:number;
+
+  constructor(private clientService: ClientService) { }
 
   ngOnInit() {
+    this.getAll();
     this.fecha = fechaObj.format(new Date(),'D [DE] MMMM [DE] YYYY');
+    this.client.fecha = this.fecha;
   }
 
   ngAfterViewInit(){
@@ -49,10 +150,63 @@ export class NewSurveyComponent implements OnInit {
   }
 
   drawComplete(){
-    console.log(this.signaturePad.toDataURL());
+    this.client.firma = this.signaturePad.toDataURL();
+   // console.log(this.signaturePad.toDataURL());
   }
 
   drawStart() {
     console.log('begin drawing');
+  }
+
+  combus(){
+    this.needleValue = this.client.combust;
+  }
+
+  changeIm($event) : void {
+    this.readThis($event.target);
+  }
+  
+  readThis(inputValue: any): void {
+    if(inputValue.files[0]){
+      var file:File = inputValue.files[0];
+      var myReader:FileReader = new FileReader();
+  
+      myReader.onloadend = (e) => {
+        if(inputValue.name == 'img1')   this.client.img1 = myReader.result;
+        if(inputValue.name == 'img2')   this.client.img2 = myReader.result;
+        if(inputValue.name == 'img3')   this.client.img3 = myReader.result;
+        if(inputValue.name == 'img4')   this.client.img4 = myReader.result;
+      }
+      myReader.readAsDataURL(file);
+    } 
+  }
+
+  getAll(){
+    this.clientService.getAll().subscribe(result => {
+      this.clients = result;
+      if(this.clients){        
+        this.orden = this.clients.pop().orden;
+        this.orden++;        
+      }else{
+        this.orden = 1;
+      }
+      console.log(this.orden);
+    });
+  }
+
+  add(){
+    this.clientService.add(this.client).subscribe(data => {
+      if(data['resultado']=='OK'){
+        alert(data['mensaje']);
+       // console.log(this.client.img1);
+       // this.getAll();
+      }
+    });
+  }
+
+  getOne(orden){
+    this.clientService.getOne(orden).subscribe(result => {
+      this.client = result[0];
+    });
   }
 }

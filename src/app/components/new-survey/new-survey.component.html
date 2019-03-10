@@ -10,7 +10,7 @@
                 <div class="tr thead">
                   <div class="td">Orden de servicio</div>
                 </div>
-                <div class="tr"><input type="number" style="color:red; font-weight: 700;"></div>
+                <div class="tr"><input type="number" style="color:red; font-weight: 700;" value="{{orden}}"></div>
               </div>
               <div>
                 <span>{{fecha}}</span>
@@ -25,23 +25,23 @@
             <div class="table" id="info">
               <div class="tr">
                 <div class="td">
-                  <div class="line">NOMBRE: <input type="text"></div>
+                  <div class="line">NOMBRE: <input type="text" name="nombre" [(ngModel)]="client.nombre"></div>
                 </div>
                 <div class="td b_r">
-                  <div class="line">RFC: <input type="text"></div>
+                  <div class="line">RFC: <input type="text" name="rfc" [(ngModel)]="client.rfc"></div>
                 </div>
               </div>
               <div class="tr">
                 <div class="td">
-                  <div class="line">DIRECCIÓN: <input type="text"></div>
+                  <div class="line">DIRECCIÓN: <input type="text" name="direccion" [(ngModel)]="client.direccion"></div>
                 </div>
                 <div class="td b_r">
-                  <div class="line">TEL: <input type="text"></div>
+                  <div class="line">TEL: <input type="text" name="tel" [(ngModel)]="client.tel"></div>
                 </div>
               </div>
               <div class="tr">
                 <div class="td b_r b_b">
-                  <div class="line">CIUDAD: <input type="text"></div>
+                  <div class="line">CIUDAD: <input type="text" name="ciudad" [(ngModel)]="client.ciudad"></div>
                 </div>
               </div>
             </div>
@@ -50,18 +50,18 @@
                 <div class="td b_b" id="docum">Documentación</div>
                 <div class="td b_b">
                   Tarjeta de circ.
-                  <label for="r1"> <b> SI </b> <input type="radio" name="r1" /></label>
-                  <label for="r2"> <b> NO </b> <input type="radio" name="r1" /></label>
+                  <label for="r1"> <b> SI </b> <input type="radio" name="r1" value="SI" [(ngModel)]="client.tarjeta"/></label>
+                  <label for="r2"> <b> NO </b> <input type="radio" name="r1" value="No" [(ngModel)]="client.tarjeta"/></label>
                 </div>
                 <div class="td b_b">
                   Manual de oper.
-                  <label for="r3"> <b> SI </b> <input type="radio" name="r2" /></label>
-                  <label for="r4"> <b> NO </b> <input type="radio" name="r2" /></label>
+                  <label for="r3"> <b> SI </b> <input type="radio" name="r2" value="SI" [(ngModel)]="client.manual"/></label>
+                  <label for="r4"> <b> NO </b> <input type="radio" name="r2" value="NO" [(ngModel)]="client.manual"/></label>
                 </div>
                 <div class="td b_r b_b">
                   Poliza de seguro
-                  <label for="r5"> <b> SI </b> <input type="radio" name="r3" /></label>
-                  <label for="r6"> <b> NO </b> <input type="radio" name="r3" /></label>
+                  <label for="r5"> <b> SI </b> <input type="radio" name="r3" value="SI" [(ngModel)]="client.poliza"/></label>
+                  <label for="r6"> <b> NO </b> <input type="radio" name="r3" value="NO" [(ngModel)]="client.poliza"/></label>
                 </div>
               </div>
             </div>
@@ -77,22 +77,22 @@
                 <div class="td b_b b_r">Kilometraje</div>
               </div>
               <div class="tr">
-                <div class="td b_b"><input type="text" formControlName="qty" class="cantidad"></div>
-                <div class="td b_b"><input type="text"></div>
-                <div class="td b_b"><input type="text" formControlName="price" class="punitario"></div>
-                <div class="td b_b"><input type="text" formControlName="subtotal" class="importe"></div>
-                <div class="td b_b b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                <div class="td b_b"><input type="text" name="marca"[(ngModel)]="client.marca"></div>
+                <div class="td b_b"><input type="text" name="modelo" [(ngModel)]="client.modelo"></div>
+                <div class="td b_b"><input type="text" name="color" [(ngModel)]="client.color"></div>
+                <div class="td b_b"><input type="text" name="placas" [(ngModel)]="client.placas"></div>
+                <div class="td b_b b_r"><input type="text" name="km" [(ngModel)]="client.km"></div>
               </div>
             </div>
             <div class="table b_t_r">
               <div class="tr">
                 <div class="td b_r">
-                  <div class="line">Observaciones recepción: <input type="text" style="width:77%;"></div>
+                  <div class="line">Observaciones recepción: <input type="text" style="width:77%;" name="observ" [(ngModel)]="client.observ"></div>
                 </div>
               </div>
               <div class="tr">
                 <div class="td b_b b_r">
-                  <div class="line">Falla reportada: <input type="text" style="width:85%;"></div>
+                  <div class="line">Falla reportada: <input type="text" style="width:85%;" name="falla" [(ngModel)]="client.falla"></div>
                 </div>
               </div>
             </div>
@@ -113,112 +113,112 @@
                     <div class="td">
                       <p>Sensor de alarma</p>
                     </div>
-                    <div class="td"><input type="radio" name="i1"></div>
-                    <div class="td"><input type="radio" name="i1" formControlName="price" class="punitario"></div>
-                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type="radio" name="i1" value="SI" [(ngModel)]="client.sensor"></div>
+                    <div class="td"><input type="radio" name="i1" value="NO" [(ngModel)]="client.sensor"></div>
+                    <div class="td b_r"><input type="text" name="sensord" [(ngModel)]="client.sensord"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Velocímetro</p>
                     </div>
-                    <div class="td"><input type=radio name="i2"></div>
-                    <div class="td"><input type=radio name="i2" formControlName="price" class="punitario"></div>
-                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="i2" [(ngModel)]="client.veloci"></div>
+                    <div class="td"><input type=radio value="NO" name="i2" [(ngModel)]="client.veloci"></div>
+                    <div class="td b_r"><input type="text" name="velocid" [(ngModel)]="client.velocid"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Indicador de Temp.</p>
                     </div>
-                    <div class="td"><input type=radio name="i3"></div>
-                    <div class="td"><input type=radio name="i3" formControlName="price" class="punitario"></div>
-                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="i3" [(ngModel)]="client.indict"></div>
+                    <div class="td"><input type=radio value="NO" name="i3" [(ngModel)]="client.indict"></div>
+                    <div class="td b_r"><input type="text" name="indictd" [(ngModel)]="client.indictd"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Indicador de Gasl.</p>
                     </div>
-                    <div class="td"><input type=radio name="i4"></div>
-                    <div class="td"><input type=radio name="i4" formControlName="price" class="punitario"></div>
-                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="i4" [(ngModel)]="client.indicg"></div>
+                    <div class="td"><input type=radio value="NO" name="i4" [(ngModel)]="client.indicg"></div>
+                    <div class="td b_r"><input type="text" name="indicgd" [(ngModel)]="client.indicgd"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Radio</p>
                     </div>
-                    <div class="td"><input type=radio name="i5"></div>
-                    <div class="td"><input type=radio name="i5" formControlName="price" class="punitario"></div>
-                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="i5" [(ngModel)]="client.radio"></div>
+                    <div class="td"><input type=radio value="NO" name="i5" [(ngModel)]="client.radio"></div>
+                    <div class="td b_r"><input type="text" name="radiod" [(ngModel)]="client.radiod"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Bocinas</p>
                     </div>
-                    <div class="td"><input type=radio name="i6"></div>
-                    <div class="td"><input type=radio name="i6" formControlName="price" class="punitario"></div>
-                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="i6" [(ngModel)]="client.bocinas"></div>
+                    <div class="td"><input type=radio value="NO" name="i6" [(ngModel)]="client.bocinas"></div>
+                    <div class="td b_r"><input type="text" name="bocinasd" [(ngModel)]="client.bocinasd"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Espejo interior</p>
                     </div>
-                    <div class="td"><input type=radio name="i7"></div>
-                    <div class="td"><input type=radio name="i7" formControlName="price" class="punitario"></div>
-                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="i7" [(ngModel)]="client.espejoi"></div>
+                    <div class="td"><input type=radio value="NO" name="i7" [(ngModel)]="client.espejoi"></div>
+                    <div class="td b_r"><input type="text" name="espejoid" [(ngModel)]="client.espejoid"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Aire acondicionado</p>
                     </div>
-                    <div class="td"><input type=radio name="i8"></div>
-                    <div class="td"><input type=radio name="i8" formControlName="price" class="punitario"></div>
-                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="i8" [(ngModel)]="client.aire"></div>
+                    <div class="td"><input type=radio value="NO" name="i8" [(ngModel)]="client.aire"></div>
+                    <div class="td b_r"><input type="text" name="aired" [(ngModel)]="client.aired"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Luces interiores</p>
                     </div>
-                    <div class="td"><input type=radio name="i9"></div>
-                    <div class="td"><input type=radio name="i9" formControlName="price" class="punitario"></div>
-                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="i9" [(ngModel)]="client.luces"></div>
+                    <div class="td"><input type=radio value="NO" name="i9" [(ngModel)]="client.luces"></div>
+                    <div class="td b_r"><input type="text" name="lucesd" [(ngModel)]="client.lucesd"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Extintor</p>
                     </div>
-                    <div class="td"><input type=radio name="i10"></div>
-                    <div class="td"><input type=radio name="i10" formControlName="price" class="punitario"></div>
-                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="i10" [(ngModel)]="client.extint"></div>
+                    <div class="td"><input type=radio value="NO" name="i10" [(ngModel)]="client.extint"></div>
+                    <div class="td b_r"><input type="text" name="extintd" [(ngModel)]="client.extintd"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Reflejantes</p>
                     </div>
-                    <div class="td"><input type=radio name="i11"></div>
-                    <div class="td"><input type=radio name="i11" formControlName="price" class="punitario"></div>
-                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="i11" [(ngModel)]="client.reflej"></div>
+                    <div class="td"><input type=radio value="NO" name="i11" [(ngModel)]="client.reflej"></div>
+                    <div class="td b_r"><input type="text" name="reflejd" [(ngModel)]="client.reflejd"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Gato</p>
                     </div>
-                    <div class="td"><input type=radio name="i12"></div>
-                    <div class="td"><input type=radio name="i12" formControlName="price" class="punitario"></div>
-                    <div class="td b_r"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="i12" [(ngModel)]="client.gato"></div>
+                    <div class="td"><input type=radio value="NO" name="i12" [(ngModel)]="client.gato"></div>
+                    <div class="td b_r"><input type="text" name="gatod" [(ngModel)]="client.gatod"></div>
                   </div>
                   <div class="tr" style="height:11.4mm;">
                     <div class="td b_b">
                       <p>Condicines de control y llaves</p>
                     </div>
-                    <div class="td b_b"><input type=radio name="i13"></div>
-                    <div class="td b_b"><input type=radio name="i13" formControlName="price" class="punitario"></div>
-                    <div class="td b_r b_b"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td b_b"><input type=radio value="SI" name="i13" [(ngModel)]="client.condic"></div>
+                    <div class="td b_b"><input type=radio value="NO" name="i13" [(ngModel)]="client.condic"></div>
+                    <div class="td b_r b_b"><input type="text" name="condicd" [(ngModel)]="client.condicd"></div>
                   </div>
                 </div>
               </section>
               <div class="gauge_">
               <rg-gauge-chart [canvasWidth]="canvasWidth" [needleValue]="needleValue" [centralLabel]="centralLabel"
                 [options]="options" [name]="name" [bottomLabel]="bottomLabel"></rg-gauge-chart>
-                <input id="slider" type="range" min="0" max="100" value="0"  class="no-print" />
+                <input id="slider" type="range" min="0" max="100" (change)="combus()"name="combust" [(ngModel)]="client.combust" class="no-print" />
                 </div>
             </div>
             <div id="featur_">
@@ -234,89 +234,89 @@
                     <div class="td">
                       <p>Llantas</p>
                     </div>
-                    <div class="td"><input type=radio name="e1"></div>
-                    <div class="td"><input type=radio name="e1" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="e1" [(ngModel)]="client.llantas"></div>
+                    <div class="td"><input type=radio value="NO" name="e1" [(ngModel)]="client.llantas"></div>
+                    <div class="td"><input type="text" name="llantasd" [(ngModel)]="client.llantasd"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Toldo o techo</p>
                     </div>
-                    <div class="td"><input type=radio name="e2"></div>
-                    <div class="td"><input type=radio name="e2" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="e2" [(ngModel)]="client.toldo"></div>
+                    <div class="td"><input type=radio value="NO" name="e2" [(ngModel)]="client.toldo"></div>
+                    <div class="td"><input type="text" name="toldod" [(ngModel)]="client.toldod"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Antena</p>
                     </div>
-                    <div class="td"><input type=radio name="e3"></div>
-                    <div class="td"><input type=radio name="e3" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="e3" [(ngModel)]="client.antena"></div>
+                    <div class="td"><input type=radio value="NO" name="e3" [(ngModel)]="client.antena"></div>
+                    <div class="td"><input type="text" name="antenad" [(ngModel)]="client.antenad"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Facia delantera</p>
                     </div>
-                    <div class="td"><input type=radio name="e4"></div>
-                    <div class="td"><input type=radio name="e4" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="e4" [(ngModel)]="client.faciad"></div>
+                    <div class="td"><input type=radio value="NO" name="e4" [(ngModel)]="client.faciad"></div>
+                    <div class="td"><input type="text" name="faciadd" [(ngModel)]="client.faciadd"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Facia trasera</p>
                     </div>
-                    <div class="td"><input type=radio name="e5"></div>
-                    <div class="td"><input type=radio name="e5" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="e5" [(ngModel)]="client.faciat"></div>
+                    <div class="td"><input type=radio value="NO" name="e5" [(ngModel)]="client.faciat"></div>
+                    <div class="td"><input type="text" name="faciatd" [(ngModel)]="client.faciatd"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Cristales</p>
                     </div>
-                    <div class="td"><input type=radio name="e6"></div>
-                    <div class="td"><input type=radio name="e6" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="e6" [(ngModel)]="client.crista"></div>
+                    <div class="td"><input type=radio value="NO" name="e6" [(ngModel)]="client.crista"></div>
+                    <div class="td"><input type="text" name="cristad" [(ngModel)]="client.cristad"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Limpiadores</p>
                     </div>
-                    <div class="td"><input type=radio name="e7"></div>
-                    <div class="td"><input type=radio name="e7" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="e7" [(ngModel)]="client.limpia"></div>
+                    <div class="td"><input type=radio value="NO" name="e7" [(ngModel)]="client.limpia"></div>
+                    <div class="td"><input type="text" name="limpiad" [(ngModel)]="client.limpiad"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Espejos exteriores</p>
                     </div>
-                    <div class="td"><input type=radio name="e8"></div>
-                    <div class="td"><input type=radio name="e8" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="e8" [(ngModel)]="client.espeje"></div>
+                    <div class="td"><input type=radio value="NO" name="e8" [(ngModel)]="client.espeje"></div>
+                    <div class="td"><input type="text" name="espejed" [(ngModel)]="client.espejed"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Tapón de combus</p>
                     </div>
-                    <div class="td"><input type=radio name="e9"></div>
-                    <div class="td"><input type=radio name="e9" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="e9" [(ngModel)]="client.taponc"></div>
+                    <div class="td"><input type=radio value="NO" name="e9" [(ngModel)]="client.taponc"></div>
+                    <div class="td"><input type="text" name="taponcd" [(ngModel)]="client.taponcd"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Tapón de ruedas</p>
                     </div>
-                    <div class="td"><input type=radio name="e10"></div>
-                    <div class="td"><input type=radio name="e10" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="e10" [(ngModel)]="client.taponr"></div>
+                    <div class="td"><input type=radio value="NO" name="e10" [(ngModel)]="client.taponr"></div>
+                    <div class="td"><input type="text" name="taponrd" [(ngModel)]="client.taponrd"></div>
                   </div>
                   <div class="tr">
                     <div class="td b_b">
                       <p>Llanta de refacción</p>
                     </div>
-                    <div class="td b_b"><input type=radio name="e11"></div>
-                    <div class="td b_b"><input type=radio name="e11" formControlName="price" class="punitario"></div>
-                    <div class="td b_b"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td b_b"><input type=radio value="SI" name="e11" [(ngModel)]="client.llantar"></div>
+                    <div class="td b_b"><input type=radio value="NO" name="e11" [(ngModel)]="client.llantar"></div>
+                    <div class="td b_b"><input type="text" name="llantard" [(ngModel)]="client.llantard"></div>
                   </div>
                 </div>
               </section>
@@ -332,56 +332,60 @@
                     <div class="td">
                       <p>Aceite</p>
                     </div>
-                    <div class="td"><input type=radio name="m1"></div>
-                    <div class="td"><input type=radio name="m1" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="m1" [(ngModel)]="client.aceite"></div>
+                    <div class="td"><input type=radio value="NO" name="m1" [(ngModel)]="client.aceite"></div>
+                    <div class="td"><input type="text" name="aceited" [(ngModel)]="client.aceited"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Anticongelante</p>
                     </div>
-                    <div class="td"><input type=radio name="m2"></div>
-                    <div class="td"><input type=radio name="m2" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="m2" [(ngModel)]="client.anticon"></div>
+                    <div class="td"><input type=radio value="NO" name="m2" [(ngModel)]="client.anticon"></div>
+                    <div class="td"><input type="text" name="anticond" [(ngModel)]="client.anticond"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Líquido de frenos</p>
                     </div>
-                    <div class="td"><input type=radio name="m3"></div>
-                    <div class="td"><input type=radio name="m3" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="m3" [(ngModel)]="client.liquido"></div>
+                    <div class="td"><input type=radio value="NO" name="m3" [(ngModel)]="client.liquido"></div>
+                    <div class="td"><input type="text" name="liquidod" [(ngModel)]="client.liquidod"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Aceite Hidráulico</p>
                     </div>
-                    <div class="td"><input type=radio name="m4"></div>
-                    <div class="td"><input type=radio name="m4" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="m4" [(ngModel)]="client.aceiteh"></div>
+                    <div class="td"><input type=radio value="NO" name="m4" [(ngModel)]="client.aceiteh"></div>
+                    <div class="td"><input type="text" name="aceitehd" [(ngModel)]="client.aceitehd"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
                       <p>Batería (ácido)</p>
                     </div>
-                    <div class="td"><input type=radio name="m5"></div>
-                    <div class="td"><input type=radio name="m5" formControlName="price" class="punitario"></div>
-                    <div class="td"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td"><input type=radio value="SI" name="m5" [(ngModel)]="client.bateria"></div>
+                    <div class="td"><input type=radio value="NO" name="m5" [(ngModel)]="client.bateria"></div>
+                    <div class="td"><input type="text" name="bateriad" [(ngModel)]="client.bateriad"></div>
                   </div>
                   <div class="tr">
                     <div class="td b_b">
                       <p>Bandas</p>
                     </div>
-                    <div class="td b_b"><input type=radio name="m6"></div>
-                    <div class="td b_b"><input type=radio name="m6" formControlName="price" class="punitario"></div>
-                    <div class="td b_b"><input type="text" formControlName="subtotal" class="importe"></div>
+                    <div class="td b_b"><input type=radio value="SI" name="m6" [(ngModel)]="client.bandas"></div>
+                    <div class="td b_b"><input type=radio value="NO" name="m6" [(ngModel)]="client.bandas"></div>
+                    <div class="td b_b"><input type="text" name="bandasd" [(ngModel)]="client.bandasd"></div>
                   </div>
                 </div>
               </section>
               <div class="sign">
-                <signature-pad [options]="signaturePadOptions"></signature-pad>
+                <signature-pad [options]="signaturePadOptions" (onEndEvent)="drawComplete()">
+
+                </signature-pad>
                   <hr>
-                  <div style="text-align:center; font-size: 0.8em;"><a (click)="clearPad()">FIRMA</a></div>
+                  <div style="text-align:center; font-size: 0.8em;">
+                    <a (click)="clearPad()" >FIRMA</a>
+                  </div>
               </div>
             </div>
           </div>
@@ -406,31 +410,40 @@
               </div>
               <div class="tr">
                 <div class="td">
-                  <div class="image-container"><input type="file" accept="image/*" onchange="showMyImage(this)"></div>
+                  <div class="image-container">
+                    <input type="file" accept="image/*" name="img1" onchange="showMyImage(this)" (change)="changeIm($event)">
+                  </div>
                 </div>
-                <div class="td b_r"><textarea name="" id="txa" cols="45" rows="6" wrap="soft"></textarea></div>
+                <div class="td b_r"><textarea name="img1d" id="txa" cols="45" rows="6" wrap="soft" [(ngModel)]="client.img1d"></textarea></div>
               </div>
               <div class="tr">
                 <div class="td">
-                    <div class="image-container"><input type="file" accept="image/*" onchange="showMyImage(this)"></div>
+                    <div class="image-container">
+                      <input type="file" accept="image/*" name="img2" onchange="showMyImage(this)" (change)="changeIm($event)">
+                    </div>
                 </div>
-                <div class="td b_r"><textarea name="" id="txa" cols="45" rows="6" wrap="soft"></textarea></div>
+                <div class="td b_r"><textarea name="img2d" id="txa" cols="45" rows="6" wrap="soft" [(ngModel)]="client.img2d"></textarea></div>
               </div>
               <div class="tr">
                 <div class="td">
-                    <div class="image-container"><input type="file" accept="image/*" onchange="showMyImage(this)"></div>
+                    <div class="image-container">
+                      <input type="file" accept="image/*" name="img3" onchange="showMyImage(this)"(change)="changeIm($event)">
+                    </div>
                 </div>
-                <div class="td b_r"><textarea name="" id="txa" cols="45" rows="6" wrap="soft"></textarea></div>
+                <div class="td b_r"><textarea name="img3d" id="txa" cols="45" rows="6" wrap="soft" [(ngModel)]="client.img3d"></textarea></div>
               </div>
               <div class="tr">
                 <div class="td b_b">
-                    <div class="image-container"><input type="file" accept="image/*" onchange="showMyImage(this)"></div>
+                    <div class="image-container">
+                      <input type="file" accept="image/*" name="img4" onchange="showMyImage(this)"(change)="changeIm($event)">
+                    </div>
                 </div>
-                <div class="td b_b b_r"><textarea name="" id="txa" cols="45" rows="6" wrap="soft"></textarea></div>
+                <div class="td b_b b_r"><textarea name="img4d" id="txa" cols="45" rows="6" wrap="soft" [(ngModel)]="client.img4d"></textarea></div>
               </div>
             </div>
           </div>
 
+          <p><button (click)="add()">Agregar</button>
         </div>
       </div>
     </section>

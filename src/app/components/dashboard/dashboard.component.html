@@ -1,3 +1,7 @@
-<p>
-  dashboard works!
-</p>
+<tr *ngFor="let client of clients">
+  <td>{{client.orden}}</td>
+  <td>{{client.nombre}}</td>
+  <td>{{client.rfc}}</td>
+  <!--<td><button (click)="baja(art.codigo)">Borrar?</button></td>
+  <td><button (click)="seleccionar(art.codigo)">Seleccionar</button></td>    -->    
+</tr>
