@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class NewSurveyComponent implements OnInit {
 
   @ViewChild(SignaturePad) signaturePad: SignaturePad;
-  private signaturePadOptions: Object = {
+  public signaturePadOptions: Object = {
     'minWidth': 0.7,
     'maxWidth': 1.2,
     'canvasWidth': 250,

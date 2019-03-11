@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { GaugeChartComponent } from 'angular-gauge-chart';
+//import { GaugeChartComponent } from 'angular-gauge-chart';
+import { GaugeChartModule } from 'angular-gauge-chart';
 import { SignaturePadModule } from 'angular2-signaturepad';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,7 +21,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     AppComponent,
     NewSurveyComponent,
     DashboardComponent,
-    GaugeChartComponent,
+    //GaugeChartComponent,
     EditFormComponent,
     FilterPipe
   ],
@@ -31,6 +32,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     HttpClientModule,
     BrowserAnimationsModule,   
     NgxPaginationModule,
+    GaugeChartModule,
     AppRoutingModule
   ],
   providers: [ClientService],

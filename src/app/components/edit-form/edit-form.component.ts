@@ -24,7 +24,7 @@ export class EditFormComponent implements OnInit {
     rangeLabel: ['E', 'F'],
     needleStartValue: 60,
   }
-  /*
+  
   client={
     orden: null,
     nombre: null,
@@ -40,10 +40,10 @@ export class EditFormComponent implements OnInit {
     color: null,
     placas: null,
     km: null,
-    observ: null,
+    observaciones: null,
     falla: null,
     fecha: null,
-    combust: null,
+    combustible: null,
     firma: null,
     img1: null,
     img1d: null,
@@ -54,44 +54,44 @@ export class EditFormComponent implements OnInit {
     img4: null,
     img4d: null,
     sensor: null,
-    veloci: null,
-    indict: null,
-    indicg: null,
+    velocimetro: null,
+    indicadort: null,
+    indicadorg: null,
     radio: null,
     bocinas: null,
     espejoi: null,
     aire: null,
     luces: null,
-    extint: null,
-    reflej: null,
+    extintor: null,
+    reflejante: null,
     gato: null,
-    condic: null,
+    condiciones: null,
     sensord: null,
-    velocid: null,
-    indictd: null,
-    indicgd: null,
+    velocimetrod: null,
+    indicadortd: null,
+    indicadorgd: null,
     radiod: null,
     bocinasd: null,
     espejoid: null,
     aired: null,
     lucesd: null,
-    extintd: null,
-    reflejd: null,
+    extintord: null,
+    reflejanted: null,
     gatod: null,
-    condicd: null,
+    condicionesd: null,
     llantas: null,
     toldo: null,
     antena: null,
     faciad: null,
     faciat: null,
-    crista: null,
-    limpia: null,
-    espeje: null,
+    cristales: null,
+    limpiadores: null,
+    espejose: null,
     taponc: null,
     taponr: null,
     llantar: null,
     aceite: null,
-    anticon: null,
+    anticongelante: null,
     liquido: null,
     aceiteh: null,
     bateria: null,
@@ -101,20 +101,20 @@ export class EditFormComponent implements OnInit {
     antenad: null,
     faciadd: null,
     faciatd: null,
-    cristad: null,
-    limpiad: null,
-    espejed: null,
+    cristalesd: null,
+    limpiadoresd: null,
+    espejosed: null,
     taponcd: null,
     taponrd: null,
     llantard: null,
     aceited: null,
-    anticond: null,
+    anticongelanted: null,
     liquidod: null,
     aceitehd: null,
     bateriad: null,
     bandasd: null
-  };*/
-  client={combustible:0};
+  };
+  //client={};
   constructor(
     private clientService: ClientService,
     private actRouter: ActivatedRoute,
@@ -129,7 +129,7 @@ export class EditFormComponent implements OnInit {
   getOne(orden){
     this.clientService.getOne(orden).subscribe(result => {
       this.client = result[0];
-      this.needleValue = this.client.combustible;
+      this.needleValue = result[0].combustible;
       
     });
   }
