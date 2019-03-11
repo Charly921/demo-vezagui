@@ -21,4 +21,7 @@ export class ClientService {
   getOne(orden: number){
     return this.http.get(`${this.url}getOne.php?orden=${orden}`);
   }
+  update(client) {
+    return this.http.post(`${this.url}update.php`, JSON.stringify(client));    
+  } 
 }

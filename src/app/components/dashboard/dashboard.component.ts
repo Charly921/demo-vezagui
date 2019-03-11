@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../../services/client.service';
-import { Client } from '../../shared/client';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,6 +8,8 @@ import { Client } from '../../shared/client';
 })
 export class DashboardComponent implements OnInit {
 
+  filter_key = '';
+  p: number = 1;
   clients=null;
   constructor(private clientService: ClientService) { }
 
@@ -18,7 +19,10 @@ export class DashboardComponent implements OnInit {
 
   getAll(){
     this.clientService.getAll().subscribe(result => {
-      this.clients = result;
+      if(result){
+      this.clients = result; 
+      this.clients.shift();
+      }
     });
   }
 }

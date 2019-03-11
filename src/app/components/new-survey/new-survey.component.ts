@@ -4,7 +4,7 @@ import 'fecha';
 import fechaObj from 'fecha';
 import { ClientService } from '../../services/client.service';
 import { HttpClient } from '@angular/common/http';
-import { Client } from '../../shared/client';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-survey',
@@ -132,7 +132,7 @@ export class NewSurveyComponent implements OnInit {
   };
   orden:number;
 
-  constructor(private clientService: ClientService) { }
+  constructor(private clientService: ClientService, private router: Router) { }
 
   ngOnInit() {
     this.getAll();
@@ -190,7 +190,7 @@ export class NewSurveyComponent implements OnInit {
       }else{
         this.orden = 1;
       }
-      console.log(this.orden);
+      
     });
   }
 
@@ -200,13 +200,10 @@ export class NewSurveyComponent implements OnInit {
         alert(data['mensaje']);
        // console.log(this.client.img1);
        // this.getAll();
+        this.router.navigate(['/new']);
       }
     });
   }
 
-  getOne(orden){
-    this.clientService.getOne(orden).subscribe(result => {
-      this.client = result[0];
-    });
-  }
+  
 }
