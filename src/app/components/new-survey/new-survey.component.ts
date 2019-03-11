@@ -200,6 +200,7 @@ export class NewSurveyComponent implements OnInit {
         alert(data['mensaje']);
        // console.log(this.client.img1);
        // this.getAll();
+ 
         this.router.navigate(['/new']);
       }
     });
