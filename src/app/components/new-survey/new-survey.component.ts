@@ -5,6 +5,8 @@ import fechaObj from 'fecha';
 import { ClientService } from '../../services/client.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-new-survey',
@@ -132,10 +134,15 @@ export class NewSurveyComponent implements OnInit {
   };
   orden:number;
 
-  constructor(private clientService: ClientService, private router: Router) { }
+  constructor(
+    private clientService: ClientService,
+    private router: Router,
+    private location: Location,
+    private actRouter: ActivatedRoute
+    ) { }
 
   ngOnInit() {
-    this.getAll();
+   // this.getAll();
     this.fecha = fechaObj.format(new Date(),'D [DE] MMMM [DE] YYYY');
     this.client.fecha = this.fecha;
   }
@@ -182,15 +189,8 @@ export class NewSurveyComponent implements OnInit {
   }
 
   getAll(){
-    this.clientService.getAll().subscribe(result => {
+      this.clientService.getAll().subscribe(result => {
       this.clients = result;
-      if(this.clients){        
-        this.orden = this.clients.pop().orden;
-        this.orden++;        
-      }else{
-        this.orden = 1;
-      }
-      
     });
   }
 
@@ -198,10 +198,12 @@ export class NewSurveyComponent implements OnInit {
     this.clientService.add(this.client).subscribe(data => {
       if(data['resultado']=='OK'){
         alert(data['mensaje']);
-       // console.log(this.client.img1);
-       // this.getAll();
- 
-        this.router.navigate(['/new']);
+        if(this.location.path() === ''){
+          this.router.navigate(['/new']);
+        }
+        if(this.location.path() === '/new'){
+          this.router.navigate(['/']);
+        }
       }
     });
   }

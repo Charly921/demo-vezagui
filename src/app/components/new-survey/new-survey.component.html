@@ -1,3 +1,19 @@
+<nav class="menu no-print">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">
+      <svg  class="svg-logo">
+        <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle">
+          <tspan alignment-baseline="middle" text-anchor="middle">di</tspan>docu
+        </text>
+      </svg>
+    </a>
+    <ul class="menu-items">
+<!--<li><a href="#">Home</a></li>-->
+      <li><a href="/dashboard/index.html">Panel</a></li>
+      <li><a (click)="add()" class="nav-save-btn">Guardar</a></li>
+    </ul>
+  </div>
+</nav>
 <div class="app">
   <form>
     <section>
@@ -10,7 +26,7 @@
                 <div class="tr thead">
                   <div class="td">Orden de servicio</div>
                 </div>
-                <div class="tr"><input type="number" style="color:red; font-weight: 700;" value="{{orden}}"></div>
+                <div class="tr"><input type="number" style="color:red; font-weight: 700;" name="orden" [(ngModel)]="client.orden" autofocus  tabindex="0" class="focusNext"></div>
               </div>
               <div>
                 <span>{{fecha}}</span>
@@ -25,7 +41,7 @@
             <div class="table" id="info">
               <div class="tr">
                 <div class="td">
-                  <div class="line">NOMBRE: <input type="text" name="nombre" [(ngModel)]="client.nombre" autofocus tabindex="1" class="focusNext" ></div>
+                  <div class="line">NOMBRE: <input type="text" name="nombre" [(ngModel)]="client.nombre" tabindex="1" class="focusNext" ></div>
                 </div>
                 <div class="td b_r">
                   <div class="line">RFC: <input type="text" name="rfc" [(ngModel)]="client.rfc" tabindex="2" class="focusNext"></div>
@@ -395,7 +411,7 @@
               DESPUÉS DE 30 DÍAS, SI NO RECOGE LA UNIDAD SE COBRARÁ PENSIÓN, ESTA EMPRESA NO SE HACE RESPONSABLE DEL MAL
               USO QUE LE DE A ESTA ORDEN.</span>
           </div>
-          <div class="no-print" id="printBtn" type="submit" (click)="add()">
+          <div class="no-print" id="printBtn" onclick="window.print()">
               <img src="assets/save.png" alt="" width="75" height="75">
             </div>
         </div>
