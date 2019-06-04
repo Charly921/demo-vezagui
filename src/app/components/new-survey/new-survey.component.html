@@ -9,7 +9,7 @@
     </a>
     <ul class="menu-items">
 <!--<li><a href="#">Home</a></li>-->
-      <li><a href="/dashboard/index.html">Panel</a></li>
+      <li><a href="/vezagui/dashboard/">Panel</a></li>
       <li><a (click)="add()" class="nav-save-btn">Guardar</a></li>
     </ul>
   </div>
@@ -34,7 +34,7 @@
             </div>
           </div>
           <div>
-            <span>MECANICA EN GENERAL Y AFINACIÓN POR COMPUTADORA PARA FULL INJECTION TODAS LAS MARCAS</span><br>
+            <span>MECANICA EN GENERAL, AFINACIÓN Y DIAGNÓSTICO POR COMPUTADORA PARA FUEL INJECTION TODAS LAS MARCAS</span><br>
             <span>HEROICO COLEGIO MILITAR No. 218 COL CHAPULTEPEC OTE. C.P. 58260 TEL. 315 02 26 MORELIA, MICH.</span>
           </div>
           <section>
@@ -56,8 +56,11 @@
                 </div>
               </div>
               <div class="tr">
-                <div class="td b_r b_b">
+                <div class="td b_b">
                   <div class="line">CIUDAD: <input type="text" name="ciudad" [(ngModel)]="client.ciudad" tabindex="5" class="focusNext"></div>
+                </div>
+                <div class="td b_r b_b">
+                  <div class="line">E-MAIL: <input type="text" name="email" [(ngModel)]="client.email" tabindex="6" class="focusNext"></div>
                 </div>
               </div>
             </div>
@@ -93,22 +96,22 @@
                 <div class="td b_b b_r">Kilometraje</div>
               </div>
               <div class="tr">
-                <div class="td b_b"><input type="text" name="marca"[(ngModel)]="client.marca" tabindex="6" class="focusNext"></div>
-                <div class="td b_b"><input type="text" name="modelo" [(ngModel)]="client.modelo" tabindex="7" class="focusNext"></div>
-                <div class="td b_b"><input type="text" name="color" [(ngModel)]="client.color" tabindex="8" class="focusNext"></div>
-                <div class="td b_b"><input type="text" name="placas" [(ngModel)]="client.placas" tabindex="9" class="focusNext"></div>
-                <div class="td b_b b_r"><input type="text" name="km" [(ngModel)]="client.km" tabindex="10" class="focusNext"></div>
+                <div class="td b_b"><input type="text" name="marca"[(ngModel)]="client.marca" tabindex="7" class="focusNext"></div>
+                <div class="td b_b"><input type="text" name="modelo" [(ngModel)]="client.modelo" tabindex="8" class="focusNext"></div>
+                <div class="td b_b"><input type="text" name="color" [(ngModel)]="client.color" tabindex="9" class="focusNext"></div>
+                <div class="td b_b"><input type="text" name="placas" [(ngModel)]="client.placas" tabindex="10" class="focusNext"></div>
+                <div class="td b_b b_r"><input type="text" name="km" [(ngModel)]="client.km" tabindex="11" class="focusNext"></div>
               </div>
             </div>
-            <div class="table b_t_r">
+            <div class="table b_t_r">            
               <div class="tr">
                 <div class="td b_r">
-                  <div class="line">Observaciones recepción: <input type="text" style="width:77%;" name="observ" [(ngModel)]="client.observ" tabindex="11" class="focusNext"></div>
+                  <div class="line">Falla reportada: <input type="text" style="width:85%;" name="falla" [(ngModel)]="client.falla" tabindex="12" class="focusNext"></div>
                 </div>
               </div>
               <div class="tr">
                 <div class="td b_b b_r">
-                  <div class="line">Falla reportada: <input type="text" style="width:85%;" name="falla" [(ngModel)]="client.falla" tabindex="12" class="focusNext"></div>
+                  <div class="line">Trabajo a realizar: <input type="text" style="width:82%;" name="observ" [(ngModel)]="client.observ" tabindex="13" class="focusNext"></div>
                 </div>
               </div>
             </div>
@@ -131,7 +134,7 @@
                     </div>
                     <div class="td"><input type="radio" name="i1" value="SI" [(ngModel)]="client.sensor"></div>
                     <div class="td"><input type="radio" name="i1" value="NO" [(ngModel)]="client.sensor"></div>
-                    <div class="td b_r"><input type="text" name="sensord" [(ngModel)]="client.sensord" tabindex="13" class="focusNext"></div>
+                    <div class="td b_r"><input type="text" name="sensord" [(ngModel)]="client.sensord" tabindex="14" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -139,7 +142,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="i2" [(ngModel)]="client.veloci"></div>
                     <div class="td"><input type=radio value="NO" name="i2" [(ngModel)]="client.veloci"></div>
-                    <div class="td b_r"><input type="text" name="velocid" [(ngModel)]="client.velocid" tabindex="14" class="focusNext"></div>
+                    <div class="td b_r"><input type="text" name="velocid" [(ngModel)]="client.velocid" tabindex="15" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -147,7 +150,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="i3" [(ngModel)]="client.indict"></div>
                     <div class="td"><input type=radio value="NO" name="i3" [(ngModel)]="client.indict"></div>
-                    <div class="td b_r"><input type="text" name="indictd" [(ngModel)]="client.indictd" tabindex="15" class="focusNext"></div>
+                    <div class="td b_r"><input type="text" name="indictd" [(ngModel)]="client.indictd" tabindex="16" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -155,7 +158,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="i4" [(ngModel)]="client.indicg"></div>
                     <div class="td"><input type=radio value="NO" name="i4" [(ngModel)]="client.indicg"></div>
-                    <div class="td b_r"><input type="text" name="indicgd" [(ngModel)]="client.indicgd" tabindex="16" class="focusNext"></div>
+                    <div class="td b_r"><input type="text" name="indicgd" [(ngModel)]="client.indicgd" tabindex="17" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -163,7 +166,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="i5" [(ngModel)]="client.radio"></div>
                     <div class="td"><input type=radio value="NO" name="i5" [(ngModel)]="client.radio"></div>
-                    <div class="td b_r"><input type="text" name="radiod" [(ngModel)]="client.radiod" tabindex="17" class="focusNext"></div>
+                    <div class="td b_r"><input type="text" name="radiod" [(ngModel)]="client.radiod" tabindex="18" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -171,7 +174,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="i6" [(ngModel)]="client.bocinas"></div>
                     <div class="td"><input type=radio value="NO" name="i6" [(ngModel)]="client.bocinas"></div>
-                    <div class="td b_r"><input type="text" name="bocinasd" [(ngModel)]="client.bocinasd" tabindex="18" class="focusNext"></div>
+                    <div class="td b_r"><input type="text" name="bocinasd" [(ngModel)]="client.bocinasd" tabindex="19" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -179,7 +182,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="i7" [(ngModel)]="client.espejoi"></div>
                     <div class="td"><input type=radio value="NO" name="i7" [(ngModel)]="client.espejoi"></div>
-                    <div class="td b_r"><input type="text" name="espejoid" [(ngModel)]="client.espejoid" tabindex="19" class="focusNext"></div>
+                    <div class="td b_r"><input type="text" name="espejoid" [(ngModel)]="client.espejoid" tabindex="20" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -187,7 +190,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="i8" [(ngModel)]="client.aire"></div>
                     <div class="td"><input type=radio value="NO" name="i8" [(ngModel)]="client.aire"></div>
-                    <div class="td b_r"><input type="text" name="aired" [(ngModel)]="client.aired" tabindex="20" class="focusNext"></div>
+                    <div class="td b_r"><input type="text" name="aired" [(ngModel)]="client.aired" tabindex="21" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -195,7 +198,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="i9" [(ngModel)]="client.luces"></div>
                     <div class="td"><input type=radio value="NO" name="i9" [(ngModel)]="client.luces"></div>
-                    <div class="td b_r"><input type="text" name="lucesd" [(ngModel)]="client.lucesd" tabindex="21" class="focusNext"></div>
+                    <div class="td b_r"><input type="text" name="lucesd" [(ngModel)]="client.lucesd" tabindex="22" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -203,7 +206,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="i10" [(ngModel)]="client.extint"></div>
                     <div class="td"><input type=radio value="NO" name="i10" [(ngModel)]="client.extint"></div>
-                    <div class="td b_r"><input type="text" name="extintd" [(ngModel)]="client.extintd" tabindex="22" class="focusNext"></div>
+                    <div class="td b_r"><input type="text" name="extintd" [(ngModel)]="client.extintd" tabindex="23" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -211,7 +214,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="i11" [(ngModel)]="client.reflej"></div>
                     <div class="td"><input type=radio value="NO" name="i11" [(ngModel)]="client.reflej"></div>
-                    <div class="td b_r"><input type="text" name="reflejd" [(ngModel)]="client.reflejd" tabindex="23" class="focusNext"></div>
+                    <div class="td b_r"><input type="text" name="reflejd" [(ngModel)]="client.reflejd" tabindex="24" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -219,7 +222,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="i12" [(ngModel)]="client.gato"></div>
                     <div class="td"><input type=radio value="NO" name="i12" [(ngModel)]="client.gato"></div>
-                    <div class="td b_r"><input type="text" name="gatod" [(ngModel)]="client.gatod" tabindex="24" class="focusNext"></div>
+                    <div class="td b_r"><input type="text" name="gatod" [(ngModel)]="client.gatod" tabindex="25" class="focusNext"></div>
                   </div>
                   <div class="tr" style="height:11.4mm;">
                     <div class="td b_b">
@@ -227,7 +230,7 @@
                     </div>
                     <div class="td b_b"><input type=radio value="SI" name="i13" [(ngModel)]="client.condic"></div>
                     <div class="td b_b"><input type=radio value="NO" name="i13" [(ngModel)]="client.condic"></div>
-                    <div class="td b_r b_b"><input type="text" name="condicd" [(ngModel)]="client.condicd" tabindex="25" class="focusNext"></div>
+                    <div class="td b_r b_b"><input type="text" name="condicd" [(ngModel)]="client.condicd" tabindex="26" class="focusNext"></div>
                   </div>
                 </div>
               </section>
@@ -252,7 +255,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="e1" [(ngModel)]="client.llantas"></div>
                     <div class="td"><input type=radio value="NO" name="e1" [(ngModel)]="client.llantas"></div>
-                    <div class="td"><input type="text" name="llantasd" [(ngModel)]="client.llantasd" tabindex="26" class="focusNext"></div>
+                    <div class="td"><input type="text" name="llantasd" [(ngModel)]="client.llantasd" tabindex="27" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -260,7 +263,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="e2" [(ngModel)]="client.toldo"></div>
                     <div class="td"><input type=radio value="NO" name="e2" [(ngModel)]="client.toldo"></div>
-                    <div class="td"><input type="text" name="toldod" [(ngModel)]="client.toldod" tabindex="27" class="focusNext"></div>
+                    <div class="td"><input type="text" name="toldod" [(ngModel)]="client.toldod" tabindex="28" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -268,7 +271,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="e3" [(ngModel)]="client.antena"></div>
                     <div class="td"><input type=radio value="NO" name="e3" [(ngModel)]="client.antena"></div>
-                    <div class="td"><input type="text" name="antenad" [(ngModel)]="client.antenad" tabindex="28" class="focusNext"></div>
+                    <div class="td"><input type="text" name="antenad" [(ngModel)]="client.antenad" tabindex="29" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -276,7 +279,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="e4" [(ngModel)]="client.faciad"></div>
                     <div class="td"><input type=radio value="NO" name="e4" [(ngModel)]="client.faciad"></div>
-                    <div class="td"><input type="text" name="faciadd" [(ngModel)]="client.faciadd" tabindex="29" class="focusNext"></div>
+                    <div class="td"><input type="text" name="faciadd" [(ngModel)]="client.faciadd" tabindex="30" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -284,7 +287,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="e5" [(ngModel)]="client.faciat"></div>
                     <div class="td"><input type=radio value="NO" name="e5" [(ngModel)]="client.faciat"></div>
-                    <div class="td"><input type="text" name="faciatd" [(ngModel)]="client.faciatd" tabindex="30" class="focusNext"></div>
+                    <div class="td"><input type="text" name="faciatd" [(ngModel)]="client.faciatd" tabindex="31" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -292,7 +295,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="e6" [(ngModel)]="client.crista"></div>
                     <div class="td"><input type=radio value="NO" name="e6" [(ngModel)]="client.crista"></div>
-                    <div class="td"><input type="text" name="cristad" [(ngModel)]="client.cristad" tabindex="31" class="focusNext"></div>
+                    <div class="td"><input type="text" name="cristad" [(ngModel)]="client.cristad" tabindex="32" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -300,7 +303,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="e7" [(ngModel)]="client.limpia"></div>
                     <div class="td"><input type=radio value="NO" name="e7" [(ngModel)]="client.limpia"></div>
-                    <div class="td"><input type="text" name="limpiad" [(ngModel)]="client.limpiad" tabindex="32" class="focusNext"></div>
+                    <div class="td"><input type="text" name="limpiad" [(ngModel)]="client.limpiad" tabindex="33" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -308,7 +311,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="e8" [(ngModel)]="client.espeje"></div>
                     <div class="td"><input type=radio value="NO" name="e8" [(ngModel)]="client.espeje"></div>
-                    <div class="td"><input type="text" name="espejed" [(ngModel)]="client.espejed" tabindex="33" class="focusNext"></div>
+                    <div class="td"><input type="text" name="espejed" [(ngModel)]="client.espejed" tabindex="34" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -316,7 +319,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="e9" [(ngModel)]="client.taponc"></div>
                     <div class="td"><input type=radio value="NO" name="e9" [(ngModel)]="client.taponc"></div>
-                    <div class="td"><input type="text" name="taponcd" [(ngModel)]="client.taponcd" tabindex="34" class="focusNext"></div>
+                    <div class="td"><input type="text" name="taponcd" [(ngModel)]="client.taponcd" tabindex="35" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -324,7 +327,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="e10" [(ngModel)]="client.taponr"></div>
                     <div class="td"><input type=radio value="NO" name="e10" [(ngModel)]="client.taponr"></div>
-                    <div class="td"><input type="text" name="taponrd" [(ngModel)]="client.taponrd" tabindex="35" class="focusNext"></div>
+                    <div class="td"><input type="text" name="taponrd" [(ngModel)]="client.taponrd" tabindex="36" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td b_b">
@@ -332,7 +335,7 @@
                     </div>
                     <div class="td b_b"><input type=radio value="SI" name="e11" [(ngModel)]="client.llantar"></div>
                     <div class="td b_b"><input type=radio value="NO" name="e11" [(ngModel)]="client.llantar"></div>
-                    <div class="td b_b"><input type="text" name="llantard" [(ngModel)]="client.llantard" tabindex="36" class="focusNext"></div>
+                    <div class="td b_b"><input type="text" name="llantard" [(ngModel)]="client.llantard" tabindex="37" class="focusNext"></div>
                   </div>
                 </div>
               </section>
@@ -350,7 +353,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="m1" [(ngModel)]="client.aceite"></div>
                     <div class="td"><input type=radio value="NO" name="m1" [(ngModel)]="client.aceite"></div>
-                    <div class="td"><input type="text" name="aceited" [(ngModel)]="client.aceited" tabindex="37" class="focusNext"></div>
+                    <div class="td"><input type="text" name="aceited" [(ngModel)]="client.aceited" tabindex="38" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -358,7 +361,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="m2" [(ngModel)]="client.anticon"></div>
                     <div class="td"><input type=radio value="NO" name="m2" [(ngModel)]="client.anticon"></div>
-                    <div class="td"><input type="text" name="anticond" [(ngModel)]="client.anticond" tabindex="38" class="focusNext"></div>
+                    <div class="td"><input type="text" name="anticond" [(ngModel)]="client.anticond" tabindex="39" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -366,7 +369,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="m3" [(ngModel)]="client.liquido"></div>
                     <div class="td"><input type=radio value="NO" name="m3" [(ngModel)]="client.liquido"></div>
-                    <div class="td"><input type="text" name="liquidod" [(ngModel)]="client.liquidod" tabindex="39" class="focusNext"></div>
+                    <div class="td"><input type="text" name="liquidod" [(ngModel)]="client.liquidod" tabindex="40" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -374,7 +377,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="m4" [(ngModel)]="client.aceiteh"></div>
                     <div class="td"><input type=radio value="NO" name="m4" [(ngModel)]="client.aceiteh"></div>
-                    <div class="td"><input type="text" name="aceitehd" [(ngModel)]="client.aceitehd" tabindex="40" class="focusNext"></div>
+                    <div class="td"><input type="text" name="aceitehd" [(ngModel)]="client.aceitehd" tabindex="41" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td">
@@ -382,7 +385,7 @@
                     </div>
                     <div class="td"><input type=radio value="SI" name="m5" [(ngModel)]="client.bateria"></div>
                     <div class="td"><input type=radio value="NO" name="m5" [(ngModel)]="client.bateria"></div>
-                    <div class="td"><input type="text" name="bateriad" [(ngModel)]="client.bateriad" tabindex="41" class="focusNext"></div>
+                    <div class="td"><input type="text" name="bateriad" [(ngModel)]="client.bateriad" tabindex="42" class="focusNext"></div>
                   </div>
                   <div class="tr">
                     <div class="td b_b">
@@ -390,7 +393,7 @@
                     </div>
                     <div class="td b_b"><input type=radio value="SI" name="m6" [(ngModel)]="client.bandas"></div>
                     <div class="td b_b"><input type=radio value="NO" name="m6" [(ngModel)]="client.bandas"></div>
-                    <div class="td b_b"><input type="text" name="bandasd" [(ngModel)]="client.bandasd" tabindex="42" class="focusNext"></div>
+                    <div class="td b_b"><input type="text" name="bandasd" [(ngModel)]="client.bandasd" tabindex="43" class="focusNext"></div>
                   </div>
                 </div>
               </section>
@@ -433,7 +436,7 @@
                     <input type="file" accept="image/*" name="img1" onchange="showMyImage(this)" (change)="changeIm($event)">
                   </div>
                 </div>
-                <div class="td b_r"><textarea name="img1d" id="txa" cols="45" rows="6" wrap="soft" [(ngModel)]="client.img1d" tabindex="43" class="focusNext"></textarea></div>
+                <div class="td b_r"><textarea name="img1d" id="txa" cols="45" rows="6" wrap="soft" [(ngModel)]="client.img1d" tabindex="44" class="focusNext"></textarea></div>
               </div>
               <div class="tr">
                 <div class="td">
@@ -441,7 +444,7 @@
                       <input type="file" accept="image/*" name="img2" onchange="showMyImage(this)" (change)="changeIm($event)">
                     </div>
                 </div>
-                <div class="td b_r"><textarea name="img2d" id="txa" cols="45" rows="6" wrap="soft" [(ngModel)]="client.img2d" tabindex="44" class="focusNext"></textarea></div>
+                <div class="td b_r"><textarea name="img2d" id="txa" cols="45" rows="6" wrap="soft" [(ngModel)]="client.img2d" tabindex="45" class="focusNext"></textarea></div>
               </div>
               <div class="tr">
                 <div class="td">
@@ -449,7 +452,7 @@
                       <input type="file" accept="image/*" name="img3" onchange="showMyImage(this)"(change)="changeIm($event)">
                     </div>
                 </div>
-                <div class="td b_r"><textarea name="img3d" id="txa" cols="45" rows="6" wrap="soft" [(ngModel)]="client.img3d" tabindex="45" class="focusNext"></textarea></div>
+                <div class="td b_r"><textarea name="img3d" id="txa" cols="45" rows="6" wrap="soft" [(ngModel)]="client.img3d" tabindex="46" class="focusNext"></textarea></div>
               </div>
               <div class="tr">
                 <div class="td b_b">
@@ -457,7 +460,7 @@
                       <input type="file" accept="image/*" name="img4" onchange="showMyImage(this)"(change)="changeIm($event)">
                     </div>
                 </div>
-                <div class="td b_b b_r"><textarea name="img4d" id="txa" cols="45" rows="6" wrap="soft" [(ngModel)]="client.img4d" tabindex="46" class="focusNext"></textarea></div>
+                <div class="td b_b b_r"><textarea name="img4d" id="txa" cols="45" rows="6" wrap="soft" [(ngModel)]="client.img4d" tabindex="47" class="focusNext"></textarea></div>
               </div>
             </div>
           </div>

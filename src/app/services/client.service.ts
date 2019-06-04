@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ClientService {
 
-  url='http://localhost/vezagui/';
+//  url='https://didocu.com.mx/vezagui/';
+  url= 'http://localhost/pepe/';
 
   constructor(private http: HttpClient) { }
 
@@ -24,4 +25,9 @@ export class ClientService {
   update(client) {
     return this.http.post(`${this.url}update.php`, JSON.stringify(client));    
   } 
+
+  mail(){
+    console.log('mail!');
+    return this.http.post(`${this.url}mail.php`, {id:1,email:'rdz.carlos@mail.com'});
+  }
 }

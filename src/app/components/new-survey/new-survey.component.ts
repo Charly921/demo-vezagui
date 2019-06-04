@@ -50,6 +50,7 @@ export class NewSurveyComponent implements OnInit {
     direccion: null,
     tel: null,
     ciudad: null,
+    email: null,
     tarjeta: null,
     manual: null,
     poliza: null,
@@ -145,6 +146,8 @@ export class NewSurveyComponent implements OnInit {
    // this.getAll();
     this.fecha = fechaObj.format(new Date(),'D [DE] MMMM [DE] YYYY');
     this.client.fecha = this.fecha;
+    this.client.combust = 0;
+    this.clientService.mail();
   }
 
   ngAfterViewInit(){

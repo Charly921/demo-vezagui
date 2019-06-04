@@ -501,6 +501,7 @@ input[type=range]:focus::-ms-fill-upper {
   color: #fff;
   padding: 10px 32px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .svg-logo {
   width: 100%;
